@@ -10,4 +10,8 @@ type Data struct {
 type Run struct {
 	Version string
 	Score   int
+	Name    string
+	Title   string
+	Turns   int
+	Time    string
 }

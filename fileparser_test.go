@@ -14,4 +14,16 @@ func TestParseFile(t *testing.T) {
 	if data.Runs[0].Score != 10097192 {
 		t.Fatal(data.Runs[0].Score)
 	}
+	if data.Runs[0].Name != "Octodad" {
+		t.Fatal(data.Runs[0].Name)
+	}
+	if data.Runs[0].Title != "Conqueror" {
+		t.Fatal(data.Runs[0].Title)
+	}
+	if data.Runs[0].Turns != 167562 {
+		t.Fatal(data.Runs[0].Turns)
+	}
+	if data.Runs[0].Time != "20:20:00" {
+		t.Fatal(data.Runs[0].Time)
+	}
 }
