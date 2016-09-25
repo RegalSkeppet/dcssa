@@ -8,10 +8,15 @@ type Data struct {
 
 // Run holds data for a specific run.
 type Run struct {
-	Version string
-	Score   int
-	Name    string
-	Title   string
-	Turns   int
-	Time    string
+	Version    string
+	Score      int
+	Name       string
+	Title      string
+	Race       string
+	Background string
+	Turns      int
+	Time       string
+	Escaped    bool
+	Orb        bool
+	Runes      []string
 }
