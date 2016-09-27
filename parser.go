@@ -1,8 +1,12 @@
 package dcssa
 
 import (
+	"bytes"
 	"errors"
 	"io"
+	"os"
+	"strconv"
+	"strings"
 )
 
 // Parser represents a parser.
@@ -50,44 +54,318 @@ func (p *Parser) scanIgnoreWhitespace() (tok Token, lit string) {
 	return
 }
 
-// scanUntilNewline scans until a newline, multiple newlines or EOF.
-func (p *Parser) scanUntilNewline() (tok Token, lit string) {
+// scanUntilNewline scans the next newline or multiple newlines ignoring everything else.
+func (p *Parser) scanNextNewline() (tok Token, lit string) {
+	var buf bytes.Buffer
+	tok, lit = p.scan()
 	for tok != EOF && tok != NL && tok != MNL {
+		buf.WriteString(lit)
+		tok, lit = p.scan()
+	}
+	return tok, buf.String()
+}
+
+// scanNextMultiNewline scans the next newline ignoring everything else.
+func (p *Parser) scanNextMultiNewline() (tok Token, lit string) {
+	for tok != EOF && tok != MNL {
 		tok, lit = p.scan()
 	}
 	return tok, lit
 }
 
-// ParseVersion parses the DCSS version.
-func (p *Parser) ParseVersion() (string, error) {
+// scanIgnoreIndented scans the first non-indented, non-whitespace token.
+func (p *Parser) scanIgnoreIndented() (tok Token, lit string) {
+	for {
+		tok, lit = p.scan()
+		if tok == EOF {
+			return tok, lit
+		}
+		if tok == NL || tok == MNL {
+			continue
+		}
+		if tok == WS {
+			tok, lit = p.scanNextNewline()
+			if tok == EOF {
+				return tok, lit
+			}
+			continue
+		}
+		break
+	}
+	return tok, lit
+}
+
+// scanNextTokenIgnoringOthers scans the next chosen token ignoring everything else.
+func (p *Parser) scanNextTokenIgnoringOthers(next Token) (tok Token, lit string) {
+	for {
+		tok, lit = p.scan()
+		if tok == EOF {
+			break
+		}
+		if tok != next {
+			continue
+		}
+		break
+	}
+	return tok, lit
+}
+
+// ParseFile parses a morgue file into data.
+func ParseFile(path string, data *Data) {
+	file, err := os.Open(path)
+	if err != nil {
+		data.FailedReads[path] = err.Error()
+		return
+	}
+
+	parser := NewParser(file)
+	run, err := parser.ParseRun()
+	if err != nil {
+		data.FailedReads[path] = err.Error()
+		return
+	}
+
+	data.Runs = append(data.Runs, run)
+}
+
+// ParseRun parses a morgue file.
+func (p *Parser) ParseRun() (*Run, error) {
 	var tok Token
 	var lit string
+	var err error
+
+	// Parse version.
 	for tok != EOF && tok != NUMBER && tok != NL && tok != MNL {
 		tok, lit = p.scan()
 	}
 	if tok != NUMBER {
-		return "", errors.New("could not find a number")
+		return nil, errors.New("could not find a number when parsing version")
 	}
-	version := lit
+	run := NewRun()
+	run.Version = lit
 	tok, lit = p.scan()
 	if tok == DOT {
-		version += lit
+		run.Version += lit
 		tok, lit = p.scan()
 		if tok == NUMBER {
-			version += lit
+			run.Version += lit
 			tok, lit = p.scan()
 			if tok == DOT {
-				version += lit
+				run.Version += lit
 				tok, lit = p.scan()
 				if tok == NUMBER {
-					version += lit
+					run.Version += lit
 					tok, lit = p.scan()
 				}
 			}
 		}
 	}
-	if tok != NL && tok != MNL {
-		p.scanUntilNewline()
+	p.unscan()
+
+	tok, lit = p.scanNextMultiNewline()
+	if tok != MNL {
+		return nil, errors.New("expected multiple newlines after version: " + lit)
 	}
-	return version, nil
+
+	// Parse score.
+	if tok, lit = p.scan(); tok != NUMBER {
+		return nil, errors.New("expected number when parsing score: " + lit)
+	}
+	run.Score, err = strconv.Atoi(lit)
+	if err != nil {
+		return nil, errors.New("could not parse score int: " + err.Error())
+	}
+	if tok, lit = p.scanNextNewline(); tok == EOF {
+		return nil, errors.New("EOF after score")
+	}
+
+	// Parse name and title.
+	tok, lit = p.scanIgnoreIndented()
+	if tok != WORD && tok != NUMBER && tok != MINUS && tok != DOT && tok != UNDERSCORE && lit != " " {
+		return nil, errors.New("expected valid name: " + lit)
+	}
+	nameAndTitle := []string{}
+	for tok != EOF && tok != BPAREN {
+		nameAndTitle = append(nameAndTitle, lit)
+		tok, lit = p.scan()
+	}
+	if tok == EOF {
+		return nil, errors.New("EOF when parsing name and title")
+	}
+	nameAndTitleSeparatorIndex := -1
+	for i := len(nameAndTitle) - 1; i >= 0; i-- {
+		if nameAndTitle[i] == "the" {
+			nameAndTitleSeparatorIndex = i
+			break
+		}
+	}
+	if nameAndTitleSeparatorIndex < 0 {
+		return nil, errors.New("expected 'the' somewhere in name and title")
+	}
+	run.Name = strings.Trim(strings.Join(nameAndTitle[:nameAndTitleSeparatorIndex], ""), " ")
+	run.Title = strings.Trim(strings.Join(nameAndTitle[nameAndTitleSeparatorIndex+2:], ""), " ")
+
+	// Parse race.
+	tok, lit = p.scan()
+	if tok != WORD {
+		return nil, errors.New("expected word when parsing race")
+	}
+	run.Race = lit
+	switch lit {
+	case "Deep", "High", "Hill", "Vine":
+		tok, lit = p.scanIgnoreWhitespace()
+		if tok != WORD {
+			return nil, errors.New("expected second word when parsing race")
+		}
+		run.Race += " "
+		run.Race += lit
+	}
+
+	// Parse background.
+	tok, lit = p.scanIgnoreWhitespace()
+	if tok != WORD {
+		return nil, errors.New("expected word when parsing background")
+	}
+	run.Background = lit
+	for tok, lit = p.scanIgnoreWhitespace(); tok == WORD; tok, lit = p.scanIgnoreWhitespace() {
+		run.Background += " "
+		run.Background += lit
+	}
+	if tok != EPAREN {
+		return nil, errors.New("expected EPAREN when parsing background")
+	}
+
+	// Parse turns.
+	tok, lit = p.scanNextTokenIgnoringOthers(NUMBER)
+	if tok == EOF {
+		return nil, errors.New("EOF when parsing turns")
+	}
+	run.Turns, err = strconv.Atoi(lit)
+	if err != nil {
+		return nil, errors.New("could not parse turns int: " + err.Error())
+	}
+
+	// Parse time.
+	tok, lit = p.scanNextTokenIgnoringOthers(NUMBER)
+	if tok == EOF {
+		return nil, errors.New("EOF when parsing turns")
+	}
+	run.Time = lit
+	if tok, lit = p.scan(); tok != COLON {
+		return nil, errors.New("expected COLON when parsing time")
+	}
+	run.Time += ":"
+	if tok, lit = p.scan(); tok != NUMBER {
+		return nil, errors.New("expected second NUMBER when parsing time")
+	}
+	run.Time += lit
+	if tok, lit = p.scan(); tok != COLON {
+		return nil, errors.New("expected second COLON when parsing time")
+	}
+	run.Time += ":"
+	if tok, lit = p.scan(); tok != NUMBER {
+		return nil, errors.New("expected third NUMBER when parsing time")
+	}
+	run.Time += lit
+	if tok, lit = p.scanNextNewline(); tok != NL && tok != MNL {
+		return nil, errors.New("expected newline after time")
+	}
+
+	// Parse stats.
+	currentKey := ""
+	for {
+		if currentKey == "" {
+			tok, lit = p.scan()
+			if tok != WORD {
+				return nil, errors.New("expected WORD when parsing attributes: " + lit)
+			}
+			currentKey = lit
+			if tok, lit = p.scan(); tok != COLON {
+				return nil, errors.New("expected COLON when parsing attributes")
+			}
+		}
+		currentAttributeLits := []string{}
+		lastTok := EOF
+		for {
+			tok, lit = p.scan()
+			if tok == EOF {
+				return nil, errors.New("EOF when parsing attributes")
+			}
+			if tok == MNL || tok == NL {
+				run.Stats[currentKey] = strings.Trim(strings.Join(currentAttributeLits, ""), " ")
+				currentKey = ""
+				break
+			}
+			if tok == COLON && lastTok == WORD {
+				newKey := currentAttributeLits[len(currentAttributeLits)-1]
+				currentAttributeLits = currentAttributeLits[:len(currentAttributeLits)-1]
+				run.Stats[currentKey] = strings.Trim(strings.Join(currentAttributeLits, ""), " ")
+				currentKey = newKey
+				break
+			}
+			currentAttributeLits = append(currentAttributeLits, lit)
+			lastTok = tok
+		}
+		if tok == MNL {
+			break
+		}
+	}
+
+	// Parse resistances and equipped.
+	currentKey = ""
+	for {
+		if currentKey == "" {
+			tok, lit = p.scanIgnoreWhitespace()
+			if tok == BPAREN {
+				tok, lit = p.scanNextNewline()
+				if tok == MNL || tok == EOF {
+					break
+				}
+				continue
+			}
+			if tok != WORD {
+				return nil, errors.New("expected WORD when parsing resistances: " + lit)
+			}
+			currentKey = lit
+		}
+		tok, lit = p.scanIgnoreWhitespace()
+		if tok == EOF {
+			return nil, errors.New("EOF when parsing resistances")
+		}
+		if tok == MINUS {
+			tok, lit = p.scanNextNewline()
+			if tok == EOF {
+				return nil, errors.New("EOF when parsing equipped")
+			}
+			run.Equipped = append(run.Equipped, strings.Trim(lit, " "))
+			if tok == MNL {
+				break
+			}
+			currentKey = ""
+			continue
+		}
+		currentValue := lit
+		for {
+			tok, lit = p.scan()
+			if tok == EOF {
+				return nil, errors.New("EOF when parsing resistances")
+			}
+			if tok == MNL || tok == NL {
+				run.Resistances[currentKey] = strings.Trim(currentValue, " ")
+				currentKey = ""
+				break
+			}
+			if tok == WORD {
+				run.Resistances[currentKey] = strings.Trim(currentValue, " ")
+				currentKey = ""
+				p.unscan()
+				break
+			}
+			currentValue += lit
+		}
+		if tok == MNL {
+			break
+		}
+	}
+	return run, nil
 }

@@ -1,0 +1,108 @@
+ Dungeon Crawl Stone Soup version 0.18.1 (tiles) character file.
+
+0 123 _-.aSdf 456 the Shield-Bearer (level 1, 18/18 HPs)
+             Began as a Human Fighter on Sept 27, 2016.
+             Got out of the dungeon alive.
+             The game lasted 00:00:05 (1 turns).
+
+123 _-.aSdf 456 the Shield-Bearer (Human Fighter)      Turns: 1, Time: 00:00:06
+
+Health: 18/18      AC:  6    Str: 16    XL:     1   Next: 0%
+Magic:  1/1        EV:  6    Int:  8    God:    
+Gold:   0          SH:  8    Dex: 12    Spells: 0 memorised, 0 levels left
+
+rFire  . . .      SeeInvis .    a - +0 flail
+rCold  . . .      Gourm    .    b - +0 scale mail
+rNeg   . . .      Faith    .    c - +0 shield
+rPois  .          Spirit   .    (no helmet)
+rElec  .          Dismiss  .    (no cloak)
+rCorr  .          Reflect  .    (no gloves)
+SustAt .          Harm     .    (no boots)
+MR     .....                    (no amulet)
+Stlth  ..........               (no ring)
+                                (no ring)
+
+@: not resistant to hostile enchantments, extremely unstealthy
+A: no striking features
+a: no special abilities
+
+
+You escaped.
+You were not hungry.
+
+You visited 1 branch of the dungeon, and saw 1 of its levels.
+
+Inventory:
+
+Hand Weapons
+ a - a +0 flail (weapon)
+Armour
+ b - a +0 scale mail (worn)
+ c - a +0 shield (worn)
+Potions
+ d - a potion of might
+Comestibles
+ f - a bread ration
+
+
+   Skills:
+ + Level 3.0 Fighting
+ + Level 2.0 Maces & Flails
+ + Level 3.0 Armour
+ + Level 3.0 Shields
+
+
+You couldn't memorise any spells.
+You didn't know any spells.
+
+Dungeon Overview and Level Annotations
+
+Branches:
+Dungeon (1/15)            
+
+Altars:
+
+Message History
+
+
+
+
+
+
+
+
+
+
+
+
+Welcome, 123 _-.aSdf 456 the Human Fighter.
+Will you be the one to retrieve the fabulous Orb of Zot from the depths?
+Press ? for a list of commands and other information.
+Found a staircase leading out of the dungeon.
+Save game and exit? 
+Welcome back, 123 _-.aSdf 456 the Human Fighter.
+Press ? for a list of commands and other information.
+Are you sure you want to leave the Dungeon? This will make you lose the game! 
+You have escaped!
+
+###
+#@#
+#.#
+#.#
+#.#
+#.#
+#..
+###
+
+
+There were no monsters in sight!
+
+
+Notes
+Turn   | Place    | Note
+--------------------------------------------------------------
+     0 | D:1      | 123 _-.aSdf 456 the Human Fighter began the quest for the Orb.
+     0 | D:1      | Reached XP level 1. HP: 18/18 MP: 1/1
+     1 | D:$      | Got out of the dungeon alive.
+             
+

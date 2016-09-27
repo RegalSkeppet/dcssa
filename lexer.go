@@ -42,6 +42,10 @@ const (
 	EQUALS      // =
 	AMPERSAND   // &
 	PIPE        // |
+	INFINITY    // ∞
+	BBRACKET    // []
+	EBRACKET    // ]
+	UNDERSCORE  // _
 )
 
 var eof = rune(0)
@@ -148,6 +152,14 @@ func (s *Scanner) Scan() (tok Token, lit string) {
 		return AMPERSAND, string(ch)
 	case '|':
 		return PIPE, string(ch)
+	case '∞':
+		return INFINITY, string(ch)
+	case '[':
+		return BBRACKET, string(ch)
+	case ']':
+		return EBRACKET, string(ch)
+	case '_':
+		return EBRACKET, string(ch)
 	}
 
 	return ILLEGAL, string(ch)
@@ -194,16 +206,6 @@ func (s *Scanner) scanWord() (tok Token, lit string) {
 		}
 	}
 
-	// If the string matches a keyword then return that keyword.
-	/*
-		switch strings.ToUpper(buf.String()) {
-		case "SELECT":
-			return SELECT, buf.String()
-		case "FROM":
-			return FROM, buf.String()
-		}
-	*/
-
 	// Otherwise return as a regular identifier.
 	return WORD, buf.String()
 }
@@ -227,30 +229,13 @@ func (s *Scanner) scanNumber() (tok Token, lit string) {
 		}
 	}
 
-	// If the string matches a keyword then return that keyword.
-	/*
-		switch strings.ToUpper(buf.String()) {
-		case "SELECT":
-			return SELECT, buf.String()
-		case "FROM":
-			return FROM, buf.String()
-		}
-	*/
-
 	// Otherwise return as a regular identifier.
 	return NUMBER, buf.String()
 }
 
 // scanIdent consumes the current rune and all contiguous ident runes.
 func (s *Scanner) scanNewline() (tok Token, lit string) {
-	// Create a buffer and read the current character into it.
-	var buf bytes.Buffer
-	buf.WriteRune(s.read())
-
 	count := 0
-
-	// Read every subsequent ident character into the buffer.
-	// Non-ident characters and EOF will cause the loop to exit.
 	for {
 		if ch := s.read(); ch == eof {
 			break

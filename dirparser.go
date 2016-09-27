@@ -25,10 +25,7 @@ func ParseDir(dir string, data *Data) error {
 		if !strings.HasSuffix(info.Name(), ".txt") {
 			return nil
 		}
-		err = ParseFile(path, data)
-		if err != nil {
-			data.FailedReads[path] = err.Error()
-		}
+		ParseFile(path, data)
 		return nil
 	})
 }
