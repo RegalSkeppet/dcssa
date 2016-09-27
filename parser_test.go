@@ -288,3 +288,11 @@ func TestParseFelid(t *testing.T) {
 		t.Fatal(data.Runs[0].Stats)
 	}
 }
+
+func TestParseSkills(t *testing.T) {
+	data := NewData()
+	ParseFile("./morgue-Codiohudgh-20160816-151847.txt", data)
+	if len(data.Runs) != 1 {
+		t.Fatal(data.FailedReads)
+	}
+}
