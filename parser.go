@@ -440,7 +440,7 @@ func (p *Parser) ParseRun() (*Run, error) {
 		if tok == EOF {
 			return nil, errors.New("EOF when parsing escaped")
 		}
-		if lit == "Inventory:" {
+		if lit == "   Skills:" {
 			break
 		}
 		if lit == "You escaped." {
@@ -448,5 +448,52 @@ func (p *Parser) ParseRun() (*Run, error) {
 		}
 	}
 
+	// Parse skills.
+	for {
+		tok, lit = p.scanIgnoreWhitespace()
+		if tok == EOF {
+			return nil, errors.New("EOF when parsing skills")
+		}
+		if tok == NL || tok == MNL {
+			break
+		}
+		skill := Skill{
+			Training: tok == PLUS,
+		}
+		tok, lit = p.scanIgnoreWhitespace() // Discard "Level"
+		if lit != "Level" {
+			return nil, errors.New("unexpted literal when parsing skills: " + lit)
+		}
+		tok, lit = p.scanIgnoreWhitespace()
+		if tok != NUMBER {
+			return nil, errors.New("expected NUMBER when parsing skills: " + lit)
+		}
+
+		skill.Level, err = strconv.Atoi(lit)
+		if err != nil {
+			return nil, errors.New("failed to parse skill level: " + err.Error())
+		}
+		tok, lit = p.scan()
+		if tok == DOT {
+			tok, lit = p.scan()
+			if tok != NUMBER {
+				return nil, errors.New("expected NUMBER when parsing skills decimal: " + lit)
+			}
+			skill.LevelDecimal, err = strconv.Atoi(lit)
+			if err != nil {
+				return nil, errors.New("failed to parse skill level decimal: " + err.Error())
+			}
+			tok, lit = p.scan()
+		}
+		if tok != WS {
+			return nil, errors.New("expected WS when parsing skills: " + lit)
+		}
+		tok, lit = p.scanNextNewline()
+		skill.Name = lit
+		run.Skills = append(run.Skills, skill)
+		if tok == MNL {
+			break
+		}
+	}
 	return run, nil
 }

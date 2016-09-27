@@ -145,6 +145,106 @@ func TestParseFile(t *testing.T) {
 	if !data.Runs[0].Escaped {
 		t.Fatal(data.Runs[0].Escaped)
 	}
+	if !reflect.DeepEqual(data.Runs[0].Skills, []Skill{
+		{
+			Name:         "Fighting",
+			Level:        27,
+			LevelDecimal: 0,
+			Training:     false,
+		},
+		{
+			Name:         "Polearms",
+			Level:        14,
+			LevelDecimal: 6,
+			Training:     false,
+		},
+		{
+			Name:         "Dodging",
+			Level:        27,
+			LevelDecimal: 0,
+			Training:     false,
+		},
+		{
+			Name:         "Stealth",
+			Level:        7,
+			LevelDecimal: 1,
+			Training:     false,
+		},
+		{
+			Name:         "Shields",
+			Level:        25,
+			LevelDecimal: 0,
+			Training:     false,
+		},
+		{
+			Name:         "Spellcasting",
+			Level:        27,
+			LevelDecimal: 0,
+			Training:     false,
+		},
+		{
+			Name:         "Conjurations",
+			Level:        20,
+			LevelDecimal: 0,
+			Training:     false,
+		},
+		{
+			Name:         "Charms",
+			Level:        9,
+			LevelDecimal: 9,
+			Training:     false,
+		},
+		{
+			Name:         "Necromancy",
+			Level:        13,
+			LevelDecimal: 8,
+			Training:     false,
+		},
+		{
+			Name:         "Translocations",
+			Level:        13,
+			LevelDecimal: 6,
+			Training:     false,
+		},
+		{
+			Name:         "Transmutations",
+			Level:        12,
+			LevelDecimal: 3,
+			Training:     false,
+		},
+		{
+			Name:         "Fire Magic",
+			Level:        18,
+			LevelDecimal: 9,
+			Training:     false,
+		},
+		{
+			Name:         "Air Magic",
+			Level:        4,
+			LevelDecimal: 6,
+			Training:     false,
+		},
+		{
+			Name:         "Earth Magic",
+			Level:        19,
+			LevelDecimal: 0,
+			Training:     false,
+		},
+		{
+			Name:         "Invocations",
+			Level:        14,
+			LevelDecimal: 5,
+			Training:     false,
+		},
+		{
+			Name:         "Evocations",
+			Level:        10,
+			LevelDecimal: 2,
+			Training:     true,
+		},
+	}) {
+		t.Fatal(data.Runs[0].Skills)
+	}
 }
 
 func TestParseLongRace(t *testing.T) {

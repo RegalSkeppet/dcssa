@@ -29,6 +29,15 @@ type Run struct {
 	Equipped    []string
 	Attributes  map[string][]string
 	Escaped     bool
+	Skills      []Skill
+}
+
+// Skill represents a skill and its level.
+type Skill struct {
+	Name         string
+	Level        int
+	LevelDecimal int
+	Training     bool
 }
 
 // NewRun creates a new Run without nils.
@@ -38,5 +47,6 @@ func NewRun() *Run {
 		Resistances: make(map[string]string),
 		Equipped:    make([]string, 0),
 		Attributes:  make(map[string][]string),
+		Skills:      make([]Skill, 0),
 	}
 }
