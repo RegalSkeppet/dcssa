@@ -96,16 +96,28 @@ func (p *Parser) scanIgnoreIndented() (tok Token, lit string) {
 }
 
 // scanNextTokenIgnoringOthers scans the next chosen token ignoring everything else.
-func (p *Parser) scanNextTokenIgnoringOthers(next Token) (tok Token, lit string) {
+func (p *Parser) scanNextTokenIgnoringOthers(ignoredLit *string, tokens ...Token) (tok Token, lit string) {
+	var buf bytes.Buffer
 	for {
 		tok, lit = p.scan()
 		if tok == EOF {
 			break
 		}
-		if tok != next {
+		done := false
+		for _, t := range tokens {
+			if tok == t {
+				done = true
+				break
+			}
+		}
+		if !done {
+			buf.WriteString(lit)
 			continue
 		}
 		break
+	}
+	if ignoredLit != nil {
+		*ignoredLit = buf.String()
 	}
 	return tok, lit
 }
@@ -236,7 +248,7 @@ func (p *Parser) ParseRun() (*Run, error) {
 	}
 
 	// Parse turns.
-	tok, lit = p.scanNextTokenIgnoringOthers(NUMBER)
+	tok, lit = p.scanNextTokenIgnoringOthers(nil, NUMBER)
 	if tok == EOF {
 		return nil, errors.New("EOF when parsing turns")
 	}
@@ -246,7 +258,7 @@ func (p *Parser) ParseRun() (*Run, error) {
 	}
 
 	// Parse time.
-	tok, lit = p.scanNextTokenIgnoringOthers(NUMBER)
+	tok, lit = p.scanNextTokenIgnoringOthers(nil, NUMBER)
 	if tok == EOF {
 		return nil, errors.New("EOF when parsing turns")
 	}
@@ -277,11 +289,11 @@ func (p *Parser) ParseRun() (*Run, error) {
 		if currentKey == "" {
 			tok, lit = p.scan()
 			if tok != WORD {
-				return nil, errors.New("expected WORD when parsing attributes: " + lit)
+				return nil, errors.New("expected WORD when parsing stats: " + lit)
 			}
 			currentKey = lit
 			if tok, lit = p.scan(); tok != COLON {
-				return nil, errors.New("expected COLON when parsing attributes")
+				return nil, errors.New("expected COLON when parsing stats")
 			}
 		}
 		currentAttributeLits := []string{}
@@ -289,7 +301,7 @@ func (p *Parser) ParseRun() (*Run, error) {
 		for {
 			tok, lit = p.scan()
 			if tok == EOF {
-				return nil, errors.New("EOF when parsing attributes")
+				return nil, errors.New("EOF when parsing stats")
 			}
 			if tok == MNL || tok == NL {
 				run.Stats[currentKey] = strings.Trim(strings.Join(currentAttributeLits, ""), " ")
@@ -367,5 +379,74 @@ func (p *Parser) ParseRun() (*Run, error) {
 			break
 		}
 	}
+
+	// Parse attributes.
+	currentKey = ""
+	for {
+		if currentKey == "" {
+			tok, lit = p.scan()
+			if tok == EOF {
+				return nil, errors.New("EOF when reading attributes")
+			}
+			currentKey = lit
+			if tok, lit = p.scan(); tok != COLON {
+				return nil, errors.New("expected COLON when parsing attributes")
+			}
+		}
+		currentValue := []string{}
+		currentAttributeLits := []string{}
+		lastToks := []Token{NL, NL}
+		for {
+			tok, lit = p.scan()
+			if tok == EOF {
+				return nil, errors.New("EOF when parsing attributes")
+			}
+			if tok == MNL {
+				currentValue = append(currentValue, strings.Trim(strings.Join(currentAttributeLits, ""), " "))
+				run.Attributes[currentKey] = currentValue
+				break
+			}
+			if tok == COLON && lastToks[1] == NL {
+				newKey := currentAttributeLits[len(currentAttributeLits)-1]
+				currentAttributeLits = currentAttributeLits[:len(currentAttributeLits)-1]
+				currentValue = append(currentValue, strings.Trim(strings.Join(currentAttributeLits, ""), " "))
+				run.Attributes[currentKey] = currentValue
+				currentKey = newKey
+				currentValue = []string{}
+				break
+			}
+			if tok == NL {
+				currentAttributeLits = append(currentAttributeLits, " ")
+			} else if tok == COLON {
+				currentValue = []string{}
+				currentAttributeLits = []string{}
+			} else if tok == COMMA {
+				currentValue = append(currentValue, strings.Trim(strings.Join(currentAttributeLits, ""), " "))
+				currentAttributeLits = []string{}
+			} else {
+				currentAttributeLits = append(currentAttributeLits, lit)
+			}
+			lastToks[1] = lastToks[0]
+			lastToks[0] = tok
+		}
+		if tok == MNL {
+			break
+		}
+	}
+
+	// Parse escaped.
+	for {
+		tok, lit = p.scanNextNewline()
+		if tok == EOF {
+			return nil, errors.New("EOF when parsing escaped")
+		}
+		if lit == "Inventory:" {
+			break
+		}
+		if lit == "You escaped." {
+			run.Escaped = true
+		}
+	}
+
 	return run, nil
 }

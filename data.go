@@ -27,9 +27,8 @@ type Run struct {
 	Stats       map[string]string
 	Resistances map[string]string
 	Equipped    []string
+	Attributes  map[string][]string
 	Escaped     bool
-	Orb         bool
-	Runes       []string
 }
 
 // NewRun creates a new Run without nils.
@@ -38,6 +37,6 @@ func NewRun() *Run {
 		Stats:       make(map[string]string),
 		Resistances: make(map[string]string),
 		Equipped:    make([]string, 0),
-		Runes:       make([]string, 0),
+		Attributes:  make(map[string][]string),
 	}
 }

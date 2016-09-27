@@ -87,17 +87,63 @@ func TestParseFile(t *testing.T) {
 	}) {
 		t.Fatal(data.Runs[0].Equipped)
 	}
+	expectedAttributes := map[string][]string{
+		"@": []string{
+			"lich-form",
+			"deflect missiles",
+			"almost entirely resistant to hostile enchantments",
+			"unstealthy",
+		},
+		"A": []string{
+			"almost no armour",
+			"amphibious",
+			"8 rings",
+			"constrict 8",
+			"camouflage 1",
+			"gelatinous body 1",
+		},
+		"a": []string{
+			"End Transformation",
+			"Channel Energy",
+			"Forget Spell",
+			"Renounce Religion",
+			"Evoke Blink",
+			"Evoke Invisibility",
+			"Evoke Flight",
+		},
+		"0": []string{"Orb of Zot"},
+		"}": []string{
+			"barnacled",
+			"slimy",
+			"silver",
+			"golden",
+			"iron",
+			"obsidian",
+			"icy",
+			"bone",
+			"abyssal",
+			"demonic",
+			"glowing",
+			"magical",
+			"fiery",
+			"dark",
+			"gossamer",
+		},
+	}
+	if len(data.Runs[0].Attributes) != len(expectedAttributes) {
+		t.Fatal(data.Runs[0].Attributes)
+	}
+	for k, v := range data.Runs[0].Attributes {
+		ev, ok := expectedAttributes[k]
+		if !ok {
+			t.Fatal(data.Runs[0].Attributes)
+		}
+		if !reflect.DeepEqual(v, ev) {
+			t.Fatal(data.Runs[0].Attributes)
+		}
+	}
 	if !data.Runs[0].Escaped {
 		t.Fatal(data.Runs[0].Escaped)
-	}
-	if !data.Runs[0].Orb {
-		t.Fatal(data.Runs[0].Orb)
-	}
-	if !reflect.DeepEqual(data.Runs[0].Runes, []string{
-		"barnacled", "slimy", "silver", "golden", "iron", "obsidian", "icy", "bone",
-		"abyssal", "demonic", "glowing", "magical", "fiery", "dark", "gossamer",
-	}) {
-		t.Fatal(data.Runs[0].Runes)
 	}
 }
 
