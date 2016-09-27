@@ -504,6 +504,34 @@ func (p *Parser) ParseRun() (*Run, error) {
 			}
 			tok, lit = p.scan()
 		}
+		if tok == BPAREN {
+			tok, lit = p.scan()
+			if tok != NUMBER {
+				return nil, errors.New("expected NUMBER when parsing crosstrained skill level: " + lit)
+			}
+			skill.Level, err = strconv.Atoi(lit)
+			if err != nil {
+				return nil, errors.New("failed to parse crosstrained skill level: " + err.Error())
+			}
+			tok, lit = p.scan()
+			if tok == DOT {
+				tok, lit = p.scan()
+				if tok != NUMBER {
+					return nil, errors.New("expected NUMBER when parsing crosstrained skills decimal: " + lit)
+				}
+				skill.LevelDecimal, err = strconv.Atoi(lit)
+				if err != nil {
+					return nil, errors.New("failed to parse crosstrained skill level decimal: " + err.Error())
+				}
+				tok, lit = p.scan()
+			} else {
+				skill.LevelDecimal = 0
+			}
+			if tok != EPAREN {
+				return nil, errors.New("expected EPAREN when parsing crosstrained skills decimal: " + lit)
+			}
+			tok, lit = p.scan()
+		}
 		if tok != WS {
 			return nil, errors.New("expected WS when parsing skills: " + lit)
 		}

@@ -1,0 +1,672 @@
+ Dungeon Crawl Stone Soup version 0.18.1 (tiles) character file.
+
+124966 Hico the Eclecticist (level 16, -5/97 HPs)
+             Began as a High Elf Conjurer on Aug 18, 2016.
+             Was the Champion of Sif Muna.
+             Hit by a large rock thrown by a cyclops (18 damage)
+             ... on level 1 of the Shoals on Aug 20, 2016.
+             The game lasted 04:07:43 (33544 turns).
+
+Hico the Eclecticist (High Elf Conjurer)           Turns: 33544, Time: 04:07:43
+
+Health: -5/97      AC: 14    Str:  7    XL:     16   Next: 40%
+Magic:  20/45      EV: 23    Int: 27    God:    Sif Muna [******]
+Gold:   673        SH:  6    Dex: 23    Spells: 12 memorised, 0 levels left
+
+rFire  + . .      SeeInvis +    a - +7 double sword (drain)
+rCold  + . .      Gourm    .    A - +0 robe of Contentment {rElec Regen+ rCorr MP+9}
+rNeg   . . .      Faith    .    B - +0 buckler
+rPois  +          Spirit   .    x - +2 helmet {SInv}
+rElec  +          Dismiss  .    E - +2 cloak {MR+}
+rCorr  +          Reflect  .    (no gloves)
+SustAt .          Harm     .    M - +1 pair of boots
+MR     ++...                    (no amulet)
+Stlth  ++++......               C - +5 ring of dexterity
+                                G - +4 ring of protection
+
+@: resistant, very slightly contaminated, very resistant to hostile
+enchantments, stealthy
+A: agile 1
+a: Channel Energy, Forget Spell, Renounce Religion
+
+
+You were on level 1 of the Shoals.
+You worshipped Sif Muna.
+Sif Muna was exalted by your worship.
+You were hungry.
+
+You visited 5 branches of the dungeon, and saw 26 of its levels.
+You also visited: Ossuary and Ice Cave.
+
+You collected 2673 gold pieces.
+You spent 2000 gold pieces at shops.
+
+Inventory:
+
+Hand Weapons
+ a - a +7 double sword of draining (weapon)
+Missiles
+ z - a throwing net (quivered)
+Armour
+ s - a +1 robe of magic resistance
+ u - a +2 robe of positive energy
+ x - a +2 helmet of see invisible (worn)
+ A - the +0 robe of Contentment (worn) {rElec Regen+ rCorr MP+9}
+   (You bought it in a shop on level 2 of the Orcish Mines)   
+   
+   It insulates you from electricity.
+   It affects your magic capacity (+9).
+   It increases your rate of regeneration.
+   It protects you from acid and corrosion.
+ B - a +0 buckler (worn)
+ E - a +2 cloak of magic resistance (worn)
+ M - a +1 pair of boots (worn)
+ T - a +2 robe of cold resistance
+Magical Staves
+ b - an uncursed staff of power
+Jewellery
+ m - an uncursed ring of resist corrosion
+ t - an uncursed ring of wizardry
+ C - a +5 ring of dexterity (right hand)
+ G - a +4 ring of protection (left hand)
+ J - an uncursed ring of sustain attributes
+ R - an uncursed ring of ice
+ W - the amulet of the Air {Inacc +Fly rElec EV+5 RMsl}
+   (You found it on level 8 of the Lair of Beasts)   
+   
+   [amulet of inaccuracy]
+   
+   It reduces the accuracy of all your attacks.
+   It affects your evasion (+5).
+   It insulates you from electricity.
+   It lets you fly.
+   It protects you from missiles.
+Wands
+ H - a wand of hasting (7/9)
+ P - a wand of disintegration (9/24)
+Scrolls
+ d - 3 scrolls of identify
+ j - 17 scrolls of remove curse
+ l - 8 scrolls of teleportation
+ w - 3 scrolls of recharging
+ y - 3 scrolls of immolation
+ I - 3 scrolls of enchant armour
+ S - a scroll of silence
+ Y - a scroll of magic mapping
+ Z - a scroll of fear
+Potions
+ e - 7 potions of curing
+ h - 3 potions of brilliance
+ k - 6 potions of flight
+ n - 4 potions of agility
+ o - a potion of haste
+ p - 2 potions of magic
+ F - 2 potions of lignification
+ K - a potion of berserk rage
+ N - 5 potions of invisibility
+ O - 2 potions of cancellation
+ V - 6 potions of might
+Books
+ g - a book of the Sky   
+   
+    Spells                             Type                      Level
+    a - Summon Lightning Spire       Summoning/Air                 4
+    b - Airstrike                    Air                           4
+    c - Silence                      Hexes/Air                     5
+    d - Deflect Missiles             Charms/Air                    6
+    e - Conjure Ball Lightning       Conjuration/Air               6
+    f - Tornado                      Air                           9
+ L - Sif Muna's Volume of Bewitching Arcane Weapons
+   (Sif Muna gifted it to you on level 12 of the Dungeon)   
+   
+    Spells                             Type                      Level
+    a - Corona                       Hexes                         1
+    b - Throw Frost                  Conjuration/Ice               2
+    c - Conjure Flame                Conjuration/Fire              3
+    d - Summon Guardian Golem        Hexes/Summoning               3
+    e - Fulminant Prism              Conjuration/Hexes             4
+    f - Bolt of Cold                 Conjuration/Ice               6
+    g - Spellforged Servitor         Conjuration/Summoning         7
+Miscellaneous
+ r - a fan of gales
+Comestibles
+ c - 12 bread rations
+ f - 2 beef jerkies
+ i - 12 meat rations
+
+
+   Skills:
+ + Level 4.8 Fighting
+   Level 1.2(4.4) Short Blades
+ + Level 6.8 Long Blades
+ + Level 1.1 Throwing
+ + Level 10.5 Dodging
+ + Level 6.2 Stealth
+ + Level 3.1 Shields
+ + Level 15.0 Spellcasting
+ + Level 14.3 Conjurations
+ + Level 6.0 Hexes
+ + Level 9.7 Charms
+ - Level 2.2 Summonings
+   Level 2.8 Translocations
+ + Level 2.2 Fire Magic
+ + Level 1.4 Ice Magic
+ * Level 11.2 Air Magic
+ + Level 1.1 Poison Magic
+ - Level 13.3 Invocations
+ + Level 0.6 Evocations
+
+
+You couldn't memorise any spells.
+You knew the following spells:
+
+ Your Spells              Type           Power        Failure   Level  Hunger
+a - Magic Dart            Conj           ####         0%          1    None
+b - Airstrike             Air            ######....   1%          4    None
+c - Dazzling Spray        Conj/Hex       ######..     1%          3    None
+d - Fireball              Conj/Fire      ######....   2%          5    None
+e - Deflect Missiles      Chrm/Air       ######....   8%          6    ####...
+f - Cure Poison           Pois           ####......   3%          2    None
+g - Iskenderun's Battles  Conj/Chrm      ######..     1%          5    None
+h - Freezing Cloud        Conj/Ice/Air   ######....   12%         6    ####...
+i - Cause Fear            Hex            ######....   2%          4    None
+j - Summon Butterflies    Summ           ####....     1%          1    None
+k - Conjure Ball Lightni  Conj/Air       ######....   1%          6    ####...
+l - Swiftness             Chrm/Air       ######..     1%          2    None
+
+
+Dungeon Overview and Level Annotations
+
+Branches:
+Dungeon (14/15)            Temple (1/1) D:5            Lair (8/8) D:11
+ Shoals (1/4) Lair:5       Spider (0/4) Lair:6        Slime (0/6) Lair:6
+    Orc (2/2) D:11            Elf (0/3) Orc:2        Vaults (0/5) D:14
+
+Altars:
+Ashenzari
+Cheibriados
+Dithmenos
+Elyvilon
+Fedhas
+Gozag
+Kikubaaqudgha
+Makhleb
+Nemelex Xobeh
+Okawaru
+Pakellas
+Qazlal
+Ru
+Sif Muna
+Trog
+Vehumet
+Xom
+Yredelemnul
+Zin
+The Shining One
+Beogh
+Jiyva
+
+Shops:
+D:6 %   D:9 !   D:12 :   Orc:2 *([(
+
+Annotations:
+D:4 Edmund
+D:7 Dowan
+Shoals:1 Nikola
+
+
+Innate Abilities, Weirdness & Mutations
+
+You are agile. (Dex +2)
+
+
+Message History
+
+Aim: Nikola, wielding a rapier of electrocution, wearing a cloak and wearing a pair of embroidered gloves (severely wounded)
+The spray of energy hits Nikola.
+Nikola is almost dead.
+Your battlesphere fires!
+The barrage of energy hits Nikola.
+Nikola is almost dead.
+Nikola gestures wildly while chanting.
+You hear a mighty clap of thunder!
+The lightning arc hits you! You resist. The lightning arc hits Nikola. The lightning arc hits you! You resist.
+* * * LOW HITPOINT WARNING * * *
+The lightning arc hits Nikola. The lightning arc hits you! You resist.
+* * * LOW HITPOINT WARNING * * *
+Read which item? (? for menu, Esc to quit)
+Blink to where?
+Press: ? - help, Dir - move target cursor, p - Nikola
+You are very lightly contaminated with residual magic.
+As you read the scroll of blinking, it crumbles to dust.
+A cyclops comes into view.
+The cyclops throws a large rock. The large rock hits you!!
+You die...
+
+≈≈?.≈≈≈≈≈≈≈.....≈≈≈..#..
+≈..≈.§§≈≈≈≈.≈.......##..
+....≈§§§§≈§≈*....>.....≈
+.≈≈≈Y§§§§..≈≈......≈.≈.≈
+..≈†≈≈§###.......≈...≈..≈
+..≈≈≈≈. #..@####........≈
+.≈≈C≈..##..§####.......≈≈
+≈≈..≈.....(..##..≈≈≈≈≈≈≈≈
+≈..≈≈≈≈..≈..###...≈≈≈≈≈≈≈
+≈≈..≈≈≈.....# #./.≈≈≈≈≈≈≈
+≈....≈≈.}...###...≈≈≈≈≈≈≈
+ ≈........†...###)...≈≈≈≈
+ .............##....≈≈≈.≈
+    ###.@[.....#.?≈≈≈≈..≈
+     ##...##.......≈≈≈.≈.
+    ##.....#.......≈≈≈≈≈.
+    #...≈≈........≈≈≈≈≈≈≈
+  ≈.....≈≈.........≈≈≈≈.≈
+  .....≈≈.≈...≈≈≈≈≈≈≈≈≈.≈
+ ≈≈≈)≈≈≈≈≈≈....≈≈≈≈###.≈
+ ≈≈≈≈≈≈≈≈≈..###.≈≈.#  ≈≈
+  ≈≈≈≈≈≈≈≈≈.# ..≈≈...
+   ≈≈≈≈≈≈≈≈≈.  ..≈≈..
+    ≈≈≈≈≈≈≈..   ≈≈≈.
+
+
+You could see a cyclops.
+
+Vanquished Creatures
+  Maud (D:11)
+  A frost giant (IceCv)
+  Nessos (D:14)
+  2 vault guards (D:14)
+  Josephine (D:11)
+  8 hydras
+  Erolcha (D:13)
+  Fannar (D:10)
+  A death knight (D:14)
+  A centaur warrior (D:14)
+  A tengu warrior (D:14)
+  10 death yaks
+  2 orc high priests (Orc:1)
+  A dancing weapon (Orc:2)
+  The ghost of Plog the Infuser, a novice HESk of Sif Muna (D:11)
+  Sonja (D:11)
+  A fire crab (Lair:5)
+  2 unseen horrors
+  A hill giant (D:11)
+  8 orc knights
+  4 wizards
+  A necromancer (D:14)
+  A lindwurm (Lair:8)
+  A deep elf mage (Orc:2)
+  19 ugly things
+  4 orc sorcerers
+  A manticore (Shoals:1)
+  2 cyclopes
+  2 griffons (Lair:8)
+  A siren (Shoals:1)
+  15 elephants
+  5 black mambas
+  Maurice (D:13)
+  3 gargoyles
+  An ice statue (IceCv)
+  17 spiny frogs
+  2 kobold demonologists (D:14)
+  4 rime drakes
+  3 freezing wraiths
+  A redback zombie (D:14)
+  12 komodo dragons
+  A tengu conjurer (D:14)
+  2 spriggan druids (Lair:8)
+  4 trolls
+  2 jumping spiders (Lair:6)
+  20 polar bears
+  3 two-headed ogres
+  20 blink frogs
+  11 slime creatures
+  12 redbacks
+  A water elemental (D:11)
+  14 spriggans (Lair:8)
+  6 wyverns
+  A shadow (D:13)
+  8 wraiths
+  Grum (D:11)
+  3 basilisks
+  17 humans (D:14)
+  74 yaks
+  9 hippogriffs
+  A hungry ghost (D:11)
+  A soldier ant (D:12)
+  11 wargs
+  18 water moccasins
+  15 porcupines
+  Duvessa (D:7)
+  48 orc warriors
+  11 ice beasts
+  4 black bears (Lair:8)
+  5 phantoms
+  4 eyes of draining
+  2 necrophages
+  3 sky beasts
+  12 ogres
+  3 wasps
+  35 wolves
+  13 centaurs
+  22 crocodiles
+  6 big kobolds
+  21 giant frogs
+  2 wyvern zombies
+  2 wyvern skeletons
+  5 scorpions
+  A water moccasin skeleton (D:6)
+  15 killer bees
+  4 wights (D:11)
+  9 jellies
+  4 electric eels
+  5 bog bodies (Ossuary)
+  4 howler monkeys
+  7 centaur zombies
+  9 crimson imps
+  6 hounds
+  2 quasits
+  3 giant frog skeletons
+  4 giant frog zombies
+  22 orc wizards
+  15 orc priests
+  6 centaur skeletons
+  14 worker ants
+  12 iguanas
+  2 killer bee zombies
+  13 sheep
+  3 hound zombies
+  4 mummies
+  6 worker ant zombies
+  3 gnolls (D:6)
+  8 adders
+  108 river rats
+  3 shadow imps
+  12 white imps (Orc:2)
+  7 oozes
+  2 adder zombies (Ossuary)
+  2 adder skeletons
+  A worm (D:4)
+  2 dart slugs
+  7 giant geckos
+  115 orcs
+  A ball python (D:1)
+  8 giant cockroaches
+  2 gnoll zombies (D:5)
+  8 goblins
+  6 hobgoblins
+  18 jackals
+  2 quokkas
+  12 bats
+  A giant gecko zombie (Ossuary)
+  7 giant newts
+  A jackal skeleton (D:5)
+  A jackal zombie (D:5)
+  27 kobolds
+  3 quokka zombies (Ossuary)
+  12 rats
+  A bush (Lair:5)
+  2 fungi
+  10 plants
+  A withered plant (Ossuary)
+1163 creatures vanquished.
+
+Vanquished Creatures (others)
+  82 fulminant prisms
+  28 fungi
+  44 plants
+  A withered plant (Ossuary)
+155 creatures vanquished.
+
+Grand Total: 1318 creatures vanquished
+
+Notes
+Turn   | Place    | Note
+--------------------------------------------------------------
+     0 | D:1      | Hico the High Elf Conjurer began the quest for the Orb.
+     0 | D:1      | Reached XP level 1. HP: 11/11 MP: 4/4
+   289 | D:1      | Reached XP level 2. HP: 17/17 MP: 3/6
+   365 | D:1      | Reached skill level 5 in Conjurations
+  1049 | D:2      | Reached XP level 3. HP: 21/21 MP: 4/7
+  1103 | D:2      | Found a glowing golden altar of the Shining One.
+  1107 | D:2      | Found a blossoming altar of Fedhas.
+  1111 | D:2      | Found a glowing silver altar of Zin.
+  1306 | D:2      | Learned a level 2 spell: Searing Ray
+  1310 | D:2      | Learned a level 3 spell: Dazzling Spray
+  1839 | D:3      | Reached skill level 3 in Spellcasting
+  2016 | D:3      | Reached XP level 4. HP: 27/27 MP: 7/9
+  2176 | D:3      | Found an iron altar of Okawaru.
+  2692 | D:4      | Noticed Edmund
+  2766 | D:4      | Reached XP level 5. HP: 24/31 MP: 6/11
+  3135 | D:4      | Reached skill level 4 in Spellcasting
+  3551 | D:4      | Reached XP level 6. HP: 24/36 MP: 8/13
+  3869 | D:5      | Entered Level 5 of the Dungeon
+  3869 | D:5      | Found an opulent altar of Gozag.
+  3873 | D:5      | Found a staircase to the Ecumenical Temple.
+  3882 | Temple   | Entered the Ecumenical Temple
+  4164 | Temple   | Became a worshipper of Sif Muna the Loreminder
+  4196 | D:5      | Learned a level 4 spell: Iskenderun's Mystic Blast
+  4201 | D:5      | Learned a level 4 spell: Fulminant Prism
+  4407 | D:5      | Found an ancient bone altar of Kikubaaqudgha.
+  4413 | D:5      | Reached skill level 5 in Spellcasting
+  4528 | D:5      | Reached XP level 7. HP: 41/41 MP: 9/15
+  4850 | D:5      | Found a basalt altar of Yredelemnul.
+  5246 | D:6      | Found Jaupycidd's Food Shoppe.
+  5266 | D:6      | Reached * piety under Sif Muna
+  5550 | D:6      | Reached skill level 6 in Spellcasting
+  5657 | D:6      | Reached skill level 1 in Hexes
+  5843 | D:6      | Reached XP level 8. HP: 47/47 MP: 6/18
+  6166 | D:6      | Reached skill level 1 in Invocations
+  6285 | D:7      | Reached skill level 1 in Short Blades
+  6333 | D:7      | Reached skill level 1 in Fighting
+  6483 | D:7      | Reached skill level 7 in Spellcasting
+  6641 | D:7      | Reached skill level 5 in Dodging
+  7011 | D:7      | Learned a level 2 spell: Cure Poison
+  7017 | D:7      | Learned a level 5 spell: Iskenderun's Battlesphere
+  7073 | D:7      | Reached ** piety under Sif Muna
+  7168 | D:7      | Noticed Duvessa
+  7175 | D:7      | Noticed Dowan
+  7181 | D:7      | Killed Duvessa
+  7181 | D:7      | Reached skill level 1 in Charms
+  7791 | D:7      | Reached skill level 1 in Shields
+  7791 | D:7      | Reached XP level 9. HP: 53/53 MP: 17/21
+  8358 | D:8      | Found a sand-covered staircase.
+  8368 | Ossuary  | Entered an ossuary
+  8628 | Ossuary  | Reached skill level 8 in Spellcasting
+  9207 | D:8      | Reached skill level 1 in Long Blades
+  9731 | D:8      | Reached *** piety under Sif Muna
+  9758 | D:8      | Found a shattered altar of Ashenzari.
+ 10574 | D:9      | Reached XP level 10. HP: 59/59 MP: 18/23
+ 10652 | D:9      | Reached skill level 9 in Spellcasting
+ 10900 | D:9      | Reached skill level 5 in Charms
+ 11182 | D:9      | Reached **** piety under Sif Muna
+ 11295 | D:9      | Noticed a red ugly thing
+ 11303 | D:9      | Killed a red ugly thing
+ 11493 | D:9      | Found Vafeamos's Distillery.
+ 11501 | D:9      | Bought 2 potions of heal wounds for 140 gold pieces
+ 11501 | D:9      | Bought a potion of cancellation for 112 gold pieces
+ 11501 | D:9      | Bought a potion of heal wounds for 70 gold pieces
+ 11501 | D:9      | Bought a potion of heal wounds for 70 gold pieces
+ 11590 | D:9      | Reached skill level 10 in Conjurations
+ 11635 | D:10     | Entered Level 10 of the Dungeon
+ 11833 | D:10     | Reached skill level 1 in Poison Magic
+ 11903 | D:10     | Noticed a wizard
+ 11906 | D:10     | Killed a wizard
+ 11906 | D:10     | Reached skill level 5 in Invocations
+ 11996 | D:10     | Reached ***** piety under Sif Muna
+ 12207 | D:10     | Noticed Fannar
+ 12215 | D:10     | Killed an unseen horror
+ 12215 | D:10     | Reached skill level 10 in Spellcasting
+ 12215 | D:10     | Reached XP level 11. HP: 47/64 MP: 4/26
+ 12215 | D:10     | Killed Fannar
+ 12784 | D:11     | Noticed Sonja
+ 12785 | D:11     | Noticed a hill giant
+ 12797 | D:11     | Killed a hill giant
+ 12798 | D:11     | Killed Sonja
+ 12860 | D:11     | Noticed Josephine
+ 12871 | D:11     | Noticed Grum
+ 12877 | D:11     | Killed Grum
+ 12903 | D:11     | Noticed Plog's ghost (novice HESk)
+ 13555 | D:11     | Killed an unseen horror
+ 13821 | D:11     | Killed Plog's ghost
+ 14030 | D:11     | Reached ****** piety under Sif Muna
+ 14030 | D:11     | Received a gift from Sif Muna
+ 14031 | D:11     | Identified Sif Muna's Reference Book on Dusty Changing (Sif Muna gifted it to you on level 11 of the Dungeon)
+ 14039 | D:11     | Noticed Maud
+ 14413 | D:11     | Learned a level 3 spell: Mephitic Cloud
+ 14663 | D:11     | HP: 4/99 [Maud/enchanted double sword (14)]
+ 14677 | D:11     | Killed Maud
+ 14677 | D:11     | Reached XP level 12. HP: 48/72 MP: 2/27
+ 15035 | D:11     | Killed Josephine
+ 15035 | D:11     | Reached skill level 1 in Throwing
+ 15035 | D:11     | Reached skill level 11 in Spellcasting
+ 15355 | D:11     | Found a staircase to the Lair.
+ 15532 | D:11     | Found a staircase to the Orcish Mines.
+ 15828 | Lair:1   | Entered Level 1 of the Lair of Beasts
+ 15862 | Lair:1   | Learned a level 4 spell: Cause Fear
+ 16530 | Lair:1   | Learned a level 1 spell: Summon Butterflies
+ 16532 | Lair:1   | Learned a level 1 spell: Apportation
+ 17157 | Lair:1   | Reached skill level 1 in Summonings
+ 17177 | Lair:2   | Reached skill level 1 in Translocations
+ 17198 | Lair:2   | Received a gift from Sif Muna
+ 17206 | Lair:2   | Learned a level 2 spell: Swiftness
+ 17215 | Lair:2   | Learned a level 5 spell: Lightning Bolt
+ 17492 | Lair:2   | Reached skill level 12 in Spellcasting
+ 17623 | Lair:2   | Got an ancient cloak
+ 17629 | Lair:2   | Identified the +2 cloak of the Four Wars {*Corrode Regen+ Str+4 Slay+3} (You found it on level 2 of the Lair of Beasts)
+ 17814 | Lair:2   | Learned a level 5 spell: Fireball
+ 17903 | Lair:3   | Reached XP level 13. HP: 76/76 MP: 8/30
+ 18368 | Lair:3   | Identified the Guide on the Assistive Birds
+ 18846 | Lair:4   | Reached skill level 1 in Air Magic
+ 18848 | Lair:4   | Reached skill level 5 in Hexes
+ 19033 | Lair:4   | Reached skill level 10 in Invocations
+ 19599 | Lair:4   | Reached skill level 1 in Fire Magic
+ 20062 | Lair:4   | Learned a level 7 spell: Delayed Fireball
+ 20076 | Lair:5   | Received a gift from Sif Muna
+ 20079 | Lair:5   | Identified Sif Muna's Collected Works on the Entourage and Hexes (Sif Muna gifted it to you on level 5 of the Lair of Beasts)
+ 20263 | Lair:1   | Learned a level 4 spell: Airstrike
+ 20506 | Lair:5   | Found a staircase to the Shoals.
+ 20624 | Lair:5   | Reached skill level 5 in Stealth
+ 20914 | Lair:5   | Reached skill level 5 in Air Magic
+ 21546 | Lair:6   | Found a sparkling altar of Nemelex Xobeh.
+ 21947 | Lair:6   | Reached XP level 14. HP: 62/83 MP: 5/31
+ 22000 | Lair:6   | Found a viscous altar of Jiyva.
+ 22001 | Lair:6   | Found a staircase to the Slime Pits.
+ 22127 | Lair:6   | Found a hole to the Spider Nest.
+ 22631 | Lair:7   | Reached skill level 5 in Long Blades
+ 23177 | Lair:7   | Identified a scroll of acquirement
+ 23580 | Lair:7   | Reached skill level 13 in Spellcasting
+ 24292 | Lair:8   | Entered Level 8 of the Lair of Beasts
+ 25159 | Lair:8   | Received a gift from Sif Muna
+ 25165 | Lair:8   | Identified Sif Muna's Almanac of Boosting Execration (Sif Muna gifted it to you on level 8 of the Lair of Beasts)
+ 26047 | Lair:8   | Reached XP level 15. HP: 59/90 MP: 25/33
+ 26786 | Lair:1   | Learned a level 6 spell: Freezing Cloud
+ 26864 | Orc:1    | Entered Level 1 of the Orcish Mines
+ 27393 | Orc:1    | Found a roughly hewn altar of Beogh.
+ 27517 | Orc:2    | Entered Level 2 of the Orcish Mines
+ 27587 | Orc:2    | Found a frozen archway.
+ 27671 | IceCv    | Entered an ice cave
+ 27723 | IceCv    | Reached skill level 10 in Dodging
+ 27909 | IceCv    | Noticed a frost giant
+ 27919 | IceCv    | Killed a frost giant
+ 27919 | IceCv    | Reached skill level 14 in Spellcasting
+ 28995 | Orc:2    | Found Lituply's Assorted Antiques.
+ 29045 | Orc:2    | Found a roughly hewn altar of Beogh.
+ 29088 | Orc:2    | Found Deulas's Weapon Boutique.
+ 29175 | Orc:2    | Found Ihalo's Armour Shoppe.
+ 29175 | Orc:2    | Found Lapor's Weapon Boutique.
+ 29191 | Orc:2    | Bought a +2 helmet of see invisible for 279 gold pieces
+ 29191 | Orc:2    | Bought the cursed +0 robe of Contentment {rElec Regen+ rCorr MP+9} for 224 gold pieces
+ 29332 | Orc:2    | Found a staircase to the Elven Halls.
+ 29747 | D:12     | Found Arha's Book Shop.
+ 29889 | D:12     | Bought a book of the Sky for 1105 gold pieces
+ 29897 | D:12     | Learned a level 6 spell: Deflect Missiles
+ 30280 | D:12     | Received a gift from Sif Muna
+ 30282 | D:12     | Identified Sif Muna's Volume of Bewitching Arcane Weapons (Sif Muna gifted it to you on level 12 of the Dungeon)
+ 30517 | D:13     | Found a shimmering altar of Xom.
+ 30777 | D:13     | Noticed Erolcha
+ 30800 | D:13     | Killed Erolcha
+ 30885 | D:13     | Reached skill level 10 in Air Magic
+ 30938 | D:13     | Noticed Maurice
+ 30945 | D:13     | Killed Maurice
+ 31461 | D:14     | Reached skill level 1 in Ice Magic
+ 31665 | D:14     | Reached XP level 16. HP: 53/97 MP: 33/35
+ 31988 | D:14     | Found a gate to the Vaults.
+ 32218 | D:14     | Gained mutation: You are agile. (Dex +2) [potion of beneficial mutation]
+ 32286 | D:14     | Noticed Nessos
+ 32294 | D:14     | Killed Nessos
+ 32833 | D:14     | Reached skill level 15 in Spellcasting
+ 33033 | D:14     | Learned a level 6 spell: Conjure Ball Lightning
+ 33465 | Shoals:1 | Entered Level 1 of the Shoals
+ 33470 | Shoals:1 | Received a gift from Sif Muna
+ 33478 | Shoals:1 | Identified Keoxahea's Almanac of Lethal Transmutation (Sif Muna gifted it to you on level 1 of the Shoals)
+ 33527 | Shoals:1 | Noticed Nikola
+ 33544 | Shoals:1 | Hit by a large rock thrown by a cyclops
+
+Skill      XL: |  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 |
+---------------+-------------------------------------------------+-----
+Conjurations   |     5     6     7     8  9 10 11 12    13 14    | 14.3
+Spellcasting   |        3     4  5  6  7  8 10    12    13 14 15 | 15.0
+Stealth        |              3           4           5     6    |  6.2
+Dodging        |                 3  4  5  6     7  8     9 10    | 10.5
+Hexes          |                    1     3     4     5        6 |  6.0
+Invocations    |                       3  4  5  7  9 11 12 13    | 13.3
+Short Blades   |                       1                         |  1.2
+Fighting       |                       1     2        3  4       |  4.8
+Charms         |                       1  4  6  8     9          |  9.7
+Shields        |                       1        2              3 |  3.1
+Long Blades    |                          2  3        4  5  6    |  6.8
+Poison Magic   |                             1                   |  1.1
+Throwing       |                                   1             |  1.1
+Summonings     |                                   2             |  2.2
+Translocations |                                   2             |  2.8
+Air Magic      |                                      5  8 10 11 | 11.2
+Fire Magic     |                                      1     2    |  2.2
+Ice Magic      |                                            1    |  1.4
+Evocations     |                                                 |  0.6
+
+Action                   |  1- 3 |  4- 6 |  7- 9 | 10-12 | 13-15 | 16-18 || total
+-------------------------+-------+-------+-------+-------+-------+-------++-------
+Melee: Short sword       |     4 |    15 |       |       |       |       ||    19
+       Rapier            |       |    17 |    27 |       |       |       ||    44
+       Falchion          |       |       |    21 |       |       |       ||    21
+       Long sword        |       |       |    66 |    44 |       |       ||   110
+       Double sword      |       |       |       |     4 |   521 |    55 ||   580
+ Fire: Blowgun           |       |       |       |     3 |       |       ||     3
+ Cast: Magic Dart        |    81 |    71 |   310 |   374 |   787 |    84 ||  1707
+       Dazzling Spray    |       |     7 |    23 |    61 |   131 |    17 ||   239
+       Searing Ray       |       |    12 |    46 |    19 |       |       ||    77
+       Iskenderun's Myst |       |       |     4 |     5 |       |       ||     9
+       Cure Poison       |       |       |     1 |     3 |     2 |     1 ||     7
+       Fulminant Prism   |       |       |    10 |    47 |    25 |       ||    82
+       Iskenderun's Batt |       |       |       |    64 |   169 |    20 ||   253
+       Mephitic Cloud    |       |       |       |     2 |       |       ||     2
+       Fireball          |       |       |       |     2 |    72 |    21 ||    95
+       Summon Butterflie |       |       |       |     1 |     7 |     2 ||    10
+       Lightning Bolt    |       |       |       |       |     8 |       ||     8
+       Swiftness         |       |       |       |       |     2 |     1 ||     3
+       Cause Fear        |       |       |       |       |     1 |       ||     1
+       Freezing Cloud    |       |       |       |       |    24 |    12 ||    36
+       Airstrike         |       |       |       |       |     9 |     4 ||    13
+       Deflect Missiles  |       |       |       |       |     2 |     1 ||     3
+       Conjure Ball Ligh |       |       |       |       |       |     1 ||     1
+Invok: Channel Energy    |       |       |    32 |   195 |   476 |    51 ||   754
+       Forget Spell      |       |       |       |       |     1 |     1 ||     2
+Evoke: Wand              |       |       |       |     3 |       |       ||     3
+  Use: Scroll            |     5 |     5 |    12 |    14 |    16 |     3 ||    55
+       Potion            |       |     1 |     1 |    13 |     4 |     2 ||    21
+ Stab: Invisible         |       |     1 |     1 |     3 |    22 |     1 ||    28
+       Sleeping          |       |       |     1 |       |    10 |       ||    11
+       Distracted        |       |       |     1 |       |     1 |       ||     2
+  Eat: Chunk             |     3 |     6 |    14 |    39 |   102 |     9 ||   173
+       Bread ration      |       |     1 |     2 |     1 |     2 |       ||     6
+       Royal jelly       |       |       |       |    10 |       |       ||    10
+       Fruit             |       |       |       |       |    18 |       ||    18
+       Pizza             |       |       |       |       |     2 |       ||     2
+       Beef jerky        |       |       |       |       |     2 |     4 ||     6
+Armor: Robe              |     3 |     8 |    62 |    48 |   144 |    29 ||   294
+       Skin              |       |       |       |     6 |       |       ||     6
+Dodge: Dodged            |    10 |    34 |   151 |   168 |   699 |   115 ||  1177
+       Deflected         |       |       |       |       |     6 |     7 ||    13
+Block: Buckler           |       |       |    36 |    45 |   183 |    37 ||   301
+

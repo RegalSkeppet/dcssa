@@ -448,3 +448,23 @@ func TestParseSkills(t *testing.T) {
 		t.Fatal(data.Runs[0].Skills)
 	}
 }
+
+func TestParseSkillsWithCrossTraining(t *testing.T) {
+	data := NewData()
+	ParseFile("./morgue-Hico-20160820-203622.txt", data)
+	if len(data.Runs) != 1 {
+		t.Fatal(data.FailedReads)
+	}
+	if len(data.Runs[0].Skills) != 19 {
+		t.Fatal(data.Runs[0].Skills)
+	}
+	expected := Skill{
+		Name:         "Short Blades",
+		Level:        4,
+		LevelDecimal: 4,
+		State:        UNUSED,
+	}
+	if data.Runs[0].Skills[1] != expected {
+		t.Fatal(data.Runs[0].Skills[1])
+	}
+}
