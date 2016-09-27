@@ -150,100 +150,218 @@ func TestParseFile(t *testing.T) {
 			Name:         "Fighting",
 			Level:        27,
 			LevelDecimal: 0,
-			Training:     false,
+			State:        MASTERED,
 		},
 		{
 			Name:         "Polearms",
 			Level:        14,
 			LevelDecimal: 6,
-			Training:     false,
+			State:        USING,
 		},
 		{
 			Name:         "Dodging",
 			Level:        27,
 			LevelDecimal: 0,
-			Training:     false,
+			State:        MASTERED,
 		},
 		{
 			Name:         "Stealth",
 			Level:        7,
 			LevelDecimal: 1,
-			Training:     false,
+			State:        USING,
 		},
 		{
 			Name:         "Shields",
 			Level:        25,
 			LevelDecimal: 0,
-			Training:     false,
+			State:        USING,
 		},
 		{
 			Name:         "Spellcasting",
 			Level:        27,
 			LevelDecimal: 0,
-			Training:     false,
+			State:        MASTERED,
 		},
 		{
 			Name:         "Conjurations",
 			Level:        20,
 			LevelDecimal: 0,
-			Training:     false,
+			State:        USING,
 		},
 		{
 			Name:         "Charms",
 			Level:        9,
 			LevelDecimal: 9,
-			Training:     false,
+			State:        USING,
 		},
 		{
 			Name:         "Necromancy",
 			Level:        13,
 			LevelDecimal: 8,
-			Training:     false,
+			State:        USING,
 		},
 		{
 			Name:         "Translocations",
 			Level:        13,
 			LevelDecimal: 6,
-			Training:     false,
+			State:        USING,
 		},
 		{
 			Name:         "Transmutations",
 			Level:        12,
 			LevelDecimal: 3,
-			Training:     false,
+			State:        USING,
 		},
 		{
 			Name:         "Fire Magic",
 			Level:        18,
 			LevelDecimal: 9,
-			Training:     false,
+			State:        USING,
 		},
 		{
 			Name:         "Air Magic",
 			Level:        4,
 			LevelDecimal: 6,
-			Training:     false,
+			State:        USING,
 		},
 		{
 			Name:         "Earth Magic",
 			Level:        19,
 			LevelDecimal: 0,
-			Training:     false,
+			State:        USING,
 		},
 		{
 			Name:         "Invocations",
 			Level:        14,
 			LevelDecimal: 5,
-			Training:     false,
+			State:        USING,
 		},
 		{
 			Name:         "Evocations",
 			Level:        10,
 			LevelDecimal: 2,
-			Training:     true,
+			State:        TRAINING,
 		},
 	}) {
 		t.Fatal(data.Runs[0].Skills)
+	}
+	if !reflect.DeepEqual(data.Runs[0].Spells, []Spell{
+		{
+			Name:    "Lehudib's Crystal Sp",
+			Type:    "Conj/Erth",
+			Power:   "########..",
+			Failure: 1,
+			Level:   8,
+			Hunger:  "N/A",
+		},
+		{
+			Name:    "Fire Storm",
+			Type:    "Conj/Fire",
+			Power:   "########..",
+			Failure: 4,
+			Level:   9,
+			Hunger:  "N/A",
+		},
+		{
+			Name:    "Ozocubu's Armour",
+			Type:    "Chrm/Ice",
+			Power:   "#######.",
+			Failure: 1,
+			Level:   3,
+			Hunger:  "N/A",
+		},
+		{
+			Name:    "Controlled Blink",
+			Type:    "Tloc",
+			Power:   "N/A",
+			Failure: 4,
+			Level:   8,
+			Hunger:  "N/A",
+		},
+		{
+			Name:    "Deflect Missiles",
+			Type:    "Chrm/Air",
+			Power:   "#######...",
+			Failure: 1,
+			Level:   6,
+			Hunger:  "N/A",
+		},
+		{
+			Name:    "Spellforged Servitor",
+			Type:    "Conj/Summ",
+			Power:   "#######...",
+			Failure: 1,
+			Level:   7,
+			Hunger:  "N/A",
+		},
+		{
+			Name:    "Blink",
+			Type:    "Tloc",
+			Power:   "N/A",
+			Failure: 0,
+			Level:   2,
+			Hunger:  "N/A",
+		},
+		{
+			Name:    "Haste",
+			Type:    "Chrm",
+			Power:   "#######.",
+			Failure: 1,
+			Level:   6,
+			Hunger:  "N/A",
+		},
+		{
+			Name:    "Apportation",
+			Type:    "Tloc",
+			Power:   "########..",
+			Failure: 0,
+			Level:   1,
+			Hunger:  "N/A",
+		},
+		{
+			Name:    "Shatter",
+			Type:    "Erth",
+			Power:   "########..",
+			Failure: 4,
+			Level:   9,
+			Hunger:  "N/A",
+		},
+		{
+			Name:    "Disjunction",
+			Type:    "Tloc",
+			Power:   "########..",
+			Failure: 4,
+			Level:   8,
+			Hunger:  "N/A",
+		},
+		{
+			Name:    "Necromutation",
+			Type:    "Trmt/Necr",
+			Power:   "########..",
+			Failure: 4,
+			Level:   8,
+			Hunger:  "N/A",
+		},
+		{
+			Name:    "Irradiate",
+			Type:    "Conj/Trmt",
+			Power:   "########..",
+			Failure: 0,
+			Level:   5,
+			Hunger:  "N/A",
+		},
+	}) {
+		t.Fatal(data.Runs[0].Spells)
+	}
+	if !reflect.DeepEqual(data.Runs[0].Mutations, []string{
+		"You cannot wear most types of armour.",
+		"You are amphibious.",
+		"You can wear up to eight rings at the same time.",
+		"You can use your tentacles to constrict eight enemies at once.",
+		"Your skin changes colour to match your surroundings (Stealth).",
+		"Your rubbery body absorbs attacks (AC +1).",
+	}) {
+		t.Fatal(data.Runs[0].Mutations)
 	}
 }
 
@@ -294,5 +412,39 @@ func TestParseSkills(t *testing.T) {
 	ParseFile("./morgue-Codiohudgh-20160816-151847.txt", data)
 	if len(data.Runs) != 1 {
 		t.Fatal(data.FailedReads)
+	}
+	if !reflect.DeepEqual(data.Runs[0].Skills, []Skill{
+		{
+			Name:         "Dodging",
+			Level:        2,
+			LevelDecimal: 0,
+			State:        USING,
+		},
+		{
+			Name:         "Stealth",
+			Level:        3,
+			LevelDecimal: 3,
+			State:        TRAINING,
+		},
+		{
+			Name:         "Spellcasting",
+			Level:        2,
+			LevelDecimal: 2,
+			State:        TRAINING,
+		},
+		{
+			Name:         "Transmutations",
+			Level:        1,
+			LevelDecimal: 0,
+			State:        UNUSED,
+		},
+		{
+			Name:         "Earth Magic",
+			Level:        3,
+			LevelDecimal: 3,
+			State:        FOCUSING,
+		},
+	}) {
+		t.Fatal(data.Runs[0].Skills)
 	}
 }

@@ -46,6 +46,7 @@ const (
 	BBRACKET    // []
 	EBRACKET    // ]
 	UNDERSCORE  // _
+	APOSTROPHE  // '
 )
 
 var eof = rune(0)
@@ -160,6 +161,8 @@ func (s *Scanner) Scan() (tok Token, lit string) {
 		return EBRACKET, string(ch)
 	case '_':
 		return EBRACKET, string(ch)
+	case '\'':
+		return APOSTROPHE, string(ch)
 	}
 
 	return ILLEGAL, string(ch)

@@ -457,8 +457,27 @@ func (p *Parser) ParseRun() (*Run, error) {
 		if tok == NL || tok == MNL {
 			break
 		}
-		skill := Skill{
-			Training: tok == PLUS,
+
+		skill := Skill{}
+		switch tok {
+		case WORD:
+			switch lit {
+			case "O":
+				skill.State = MASTERED
+			case "Level":
+				skill.State = UNUSED
+				p.unscan()
+			default:
+				return nil, errors.New("unexpected word when parsing skills: " + lit)
+			}
+		case MINUS:
+			skill.State = USING
+		case PLUS:
+			skill.State = TRAINING
+		case ASTERISK:
+			skill.State = FOCUSING
+		default:
+			return nil, errors.New("unexpected token when parsing skills: " + lit)
 		}
 		tok, lit = p.scanIgnoreWhitespace() // Discard "Level"
 		if lit != "Level" {
@@ -493,6 +512,116 @@ func (p *Parser) ParseRun() (*Run, error) {
 		run.Skills = append(run.Skills, skill)
 		if tok == MNL {
 			break
+		}
+	}
+
+	// Parse spells.
+	hasSpells := false
+	for {
+		tok, lit = p.scanNextNewline()
+		if tok == EOF {
+			return nil, errors.New("EOF when searching for spells")
+		}
+		if lit == "You didn't know any spells." {
+			break
+		}
+		if lit == "You knew the following spells:" {
+			hasSpells = true
+			p.scanNextNewline() // Discard headers
+			break
+		}
+	}
+	for hasSpells {
+		tok, lit = p.scan()
+		if tok != WORD {
+			return nil, errors.New("expected word when parsing spells: " + lit)
+		}
+		tok, lit = p.scanIgnoreWhitespace()
+		if tok != MINUS {
+			return nil, errors.New("expected MINUS when parsing spells: " + lit)
+		}
+		lits := []string{}
+		for {
+			tok, lit = p.scan()
+			if tok == EOF {
+				return nil, errors.New("EOF when parsing spells")
+			}
+			if tok == WORD && len(lits) > 0 && strings.HasSuffix(lits[len(lits)-1], "  ") {
+				p.unscan()
+				break
+			}
+			lits = append(lits, lit)
+		}
+		spell := Spell{
+			Name: strings.Trim(strings.Join(lits, ""), " "),
+		}
+		for {
+			tok, lit = p.scan()
+			if tok == EOF {
+				return nil, errors.New("EOF when parsing spells")
+			}
+			if tok == WS {
+				break
+			}
+			spell.Type += lit
+		}
+		for {
+			tok, lit = p.scan()
+			if tok == EOF {
+				return nil, errors.New("EOF when parsing spells")
+			}
+			if tok == WS {
+				break
+			}
+			spell.Power += lit
+		}
+		tok, lit = p.scan()
+		if tok != NUMBER {
+			return nil, errors.New("expected NUMBER when parsing spell failure: " + lit)
+		}
+		spell.Failure, err = strconv.Atoi(lit)
+		if err != nil {
+			return nil, errors.New("failed to parse spell failure: " + err.Error())
+		}
+		tok, lit = p.scan()
+		if tok != PERCENT {
+			return nil, errors.New("expected PERCENT when parsing spell failure: " + lit)
+		}
+		tok, lit = p.scanIgnoreWhitespace()
+		if tok != NUMBER {
+			return nil, errors.New("expected NUMBER when parsing spell level: " + lit)
+		}
+		spell.Level, err = strconv.Atoi(lit)
+		if err != nil {
+			return nil, errors.New("failed to parse spell level: " + err.Error())
+		}
+		tok, lit = p.scan()
+		if tok != WS {
+			return nil, errors.New("expected WS when parsing spell level: " + lit)
+		}
+		tok, lit = p.scanNextNewline()
+		spell.Hunger = lit
+		run.Spells = append(run.Spells, spell)
+		if tok == MNL {
+			break
+		}
+	}
+	for {
+		tok, lit = p.scanNextNewline()
+		if tok == EOF {
+			break
+		}
+		if lit == "Innate Abilities, Weirdness & Mutations" {
+			for {
+				tok, lit = p.scanNextNewline()
+				if tok == EOF {
+					break
+				}
+				run.Mutations = append(run.Mutations, lit)
+				if tok == MNL {
+					break
+				}
+			}
 		}
 	}
 	return run, nil

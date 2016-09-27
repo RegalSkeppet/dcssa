@@ -30,6 +30,8 @@ type Run struct {
 	Attributes  map[string][]string
 	Escaped     bool
 	Skills      []Skill
+	Spells      []Spell
+	Mutations   []string
 }
 
 // Skill represents a skill and its level.
@@ -37,7 +39,29 @@ type Skill struct {
 	Name         string
 	Level        int
 	LevelDecimal int
-	Training     bool
+	State        SkillState
+}
+
+// SkillState represents all states a skill can be in.
+type SkillState string
+
+// All possible SkillStates
+const (
+	UNUSED   = SkillState("unused")
+	USING    = SkillState("using")
+	TRAINING = SkillState("training")
+	FOCUSING = SkillState("focusing")
+	MASTERED = SkillState("mastered")
+)
+
+// Spell represent a known spell.
+type Spell struct {
+	Name    string
+	Type    string
+	Power   string
+	Failure int
+	Level   int
+	Hunger  string
 }
 
 // NewRun creates a new Run without nils.
@@ -48,5 +72,7 @@ func NewRun() *Run {
 		Equipped:    make([]string, 0),
 		Attributes:  make(map[string][]string),
 		Skills:      make([]Skill, 0),
+		Spells:      make([]Spell, 0),
+		Mutations:   make([]string, 0),
 	}
 }
