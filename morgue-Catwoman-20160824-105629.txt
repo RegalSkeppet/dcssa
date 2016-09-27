@@ -1,0 +1,486 @@
+ Dungeon Crawl Stone Soup version 0.18.1 (tiles) character file.
+
+10602 Catwoman the Infuser (level 11, -1/48 HPs)
+             Began as a Felid Earth Elementalist on Aug 24, 2016.
+             Was a High Priest of Sif Muna.
+             Killed from afar by a catoblepas (3 damage)
+             ... with a blast of calcifying dust
+             ... on level 4 of the Lair of Beasts.
+             The game lasted 01:38:18 (29713 turns).
+
+Catwoman the Infuser (Felid Earth Elementalist)    Turns: 29713, Time: 01:38:19
+
+Health: -1/48      AC:  2    Str:  4    XL:     11   Next: 38%
+Magic:  21/25      EV: 29    Int: 21    God:    Sif Muna [*****.]
+Gold:   488        SH:  0    Dex: 16    Spells: 7 memorised, 1 level left
+                                        Lives:  0   Deaths: 2
+
+rFire  . . .      SeeInvis +    l - 65 stones
+rCold  . . .      Gourm    .    (armour unavailable)
+rNeg   . . .      Faith    .    (shield unavailable)
+rPois  .          Spirit   .    (helmet unavailable)
+rElec  .          Dismiss  .    (cloak unavailable)
+rCorr  .          Reflect  .    (gloves unavailable)
+SustAt .          Harm     .    (boots unavailable)
+MR     +....                    (no amulet)
+Stlth  ++++......               v - ring of stealth
+                                y - +3 ring of evasion
+
+@: quick, somewhat resistant to hostile enchantments, stealthy
+A: no armour, no weapons or thrown items, claws 1, fangs 3, see invisible,
+carnivore 3, speed 1, shaggy fur 2, slow metabolism 1, sharp paws
+a: Channel Energy, Forget Spell, Renounce Religion
+
+
+You were on level 4 of the Lair of Beasts.
+You worshipped Sif Muna.
+Sif Muna was extremely pleased with you.
+You were very full.
+
+You visited 3 branches of the dungeon, and saw 16 of its levels.
+You also visited: Ossuary.
+
+You collected 800 gold pieces.
+You spent 312 gold pieces at shops.
+
+Inventory:
+
+Missiles
+ l - 65 stones (in mouth)
+Jewellery
+ v - a ring of stealth (right paw)
+ y - a +3 ring of evasion (left paw)
+Wands
+ w - a wand of flame (22/48)
+ G - a wand of acid (9/15)
+ H - a wand of hasting (6/9)
+Scrolls
+ h - 6 scrolls of teleportation
+ n - a scroll of magic mapping
+ q - 3 scrolls of recharging
+ r - 4 scrolls of remove curse
+ u - a scroll of fear
+ A - a scroll of amnesia
+ C - 5 scrolls of identify
+Potions
+ a - a potion of mutation {unknown}
+ d - 2 potions of resistance
+ e - 3 potions of lignification
+ f - 3 potions of curing
+ i - 4 potions of magic
+ j - a potion of berserk rage {unknown}
+ k - 3 potions of flight
+ m - a potion of beneficial mutation {unknown}
+ o - 4 potions of might
+ p - 2 potions of heal wounds
+ t - 3 potions of brilliance
+ z - 2 potions of ambrosia {unknown}
+ D - 4 potions of agility
+Books
+ b - a book of Geomancy   
+   
+    Spells                             Type                      Level
+    a - Sandblast                    Earth                         1
+    b - Passwall                     Transmutation/Earth           2
+    c - Stone Arrow                  Conjuration/Earth             3
+    d - Petrify                      Transmutation/Earth           4
+    e - Lee's Rapid Deconstruction   Earth                         5
+ x - a book of Enchantments   
+   
+    Spells                             Type                      Level
+    a - Cause Fear                   Hexes                         4
+    b - Yara's Violent Unravelling   Hexes/Transmutation           5
+    c - Silence                      Hexes/Air                     5
+    d - Deflect Missiles             Charms/Air                    6
+    e - Haste                        Charms                        6
+    f - Discord                      Hexes                         8
+Comestibles
+ c - 6 meat rations
+ g - 11 slices of pizza
+ s - 5 beef jerkies
+ B - a royal jelly
+
+
+   Skills:
+ + Level 5.2 Fighting
+ - Level 10.6 Dodging
+ - Level 2.6 Stealth
+ + Level 9.6 Spellcasting
+ - Level 4.5 Conjurations
+ - Level 6.2 Hexes
+ - Level 11.0 Charms
+ - Level 5.0 Transmutations
+ + Level 8.3 Earth Magic
+ - Level 4.8 Invocations
+
+
+You had one spell level left.
+You knew the following spells:
+
+ Your Spells              Type           Power        Failure   Level  Hunger
+a - Stone Arrow           Conj/Erth      #####.       1%          3    None
+b - Sandblast             Erth           #####.       1%          1    None
+c - Cause Fear            Hex            #####.....   6%          4    ##.....
+d - Petrify               Trmt/Erth      #####...     4%          4    ##.....
+e - Lee's Rapid Deconstr  Erth           #####.....   8%          5    ####...
+f - Haste                 Chrm           ######..     12%         6    ######.
+g - Yara's Violent Unrav  Hex/Trmt       ####......   21%         5    ####...
+
+
+Dungeon Overview and Level Annotations
+
+Branches:
+Dungeon (11/15)            Temple (1/1) D:5            Lair (4/8) D:9
+    Orc (0/2) D:9         
+ Swamp: Lair:3-6    Shoals: Lair:3-6     Snake: Lair:3-6    Spider: Lair:3-6
+
+Altars:
+Ashenzari
+Cheibriados
+Dithmenos
+Elyvilon
+Fedhas
+Gozag
+Kikubaaqudgha
+Makhleb
+Nemelex Xobeh
+Okawaru
+Pakellas
+Qazlal
+Ru
+Sif Muna
+Trog
+Vehumet
+Xom
+Yredelemnul
+Zin
+The Shining One
+
+Shops:
+D:8 (   D:9 }
+
+Annotations:
+D:3 Sycwacs's ghost, amateur HESk
+
+
+Innate Abilities, Weirdness & Mutations
+
+You cannot wear armour.
+You are incapable of wielding weapons or throwing items.
+You have sharp claws.
+You have razor-sharp teeth.
+You have supernaturally acute eyesight.
+You are carnivorous and can eat meat at any time.
+You cover ground quickly.
+You are covered in thick fur (AC +2).
+You have a slow metabolism.
+Your sharp claws are effective at attacking unaware monsters.
+
+
+Message History
+
+The rocky blast hits the catoblepas.
+The catoblepas is lightly wounded.
+Casting: Sandblast
+Confirm with . or Enter, or press ? or * to list all spells.
+Aiming: Sandblast
+Press: ? - help, Shift-Dir - straight line, f/p - catoblepas
+Aim: a catoblepas (lightly wounded)
+The rocky blast hits the catoblepas.
+The catoblepas is moderately wounded.
+The catoblepas gores you!!
+Ouch! That really hurt!
+* * * LOW HITPOINT WARNING * * *
+Read which item? (? for menu, Esc to quit)
+Okay, then.
+Evoke which item? (* to show all) (? for menu, Esc to quit)
+Okay, then.
+Unknown command.
+The catoblepas breathes a plume of calcifying dust at you.
+The blast of calcifying dust hits you!
+You die...
+
+...##  ..# #....#.....P#......##...P.#..P#
+             .. ##P...##.....P#........†.#
+                        .........#..#...##
+                        ......####.###..#
+                        ........#.......#
+                        .................#
+                        ................##
+                        P................#
+                        #...............##
+                        .....#P.....##..#
+                        #...##...#### ..#
+                        +...###.#.##   .P
+                       ##...# #....#
+                       #....###....#
+                        #@..P##.+.##
+                    #  ##§..####..#
+                    #..#P.§..##...#..#
+                   .......Y............
+                   ....................
+                  ......................
+                  ......................
+                  ...$..................
+                  ....P#.....P....#.#...
+                   ##.###....##....##P.
+                    ..  #....# #..#.
+                        #.....  ...
+
+
+You could see a catoblepas.
+
+Vanquished Creatures
+  Sonja (D:10)
+  A hill giant (D:10)
+  An elephant (D:9)
+  Psyche (D:8)
+  4 spiny frogs
+  2 rime drakes
+  2 komodo dragons (Lair:1)
+  A polar bear (Lair:3)
+  A troll (D:9)
+  A queen bee (D:10)
+  A two-headed ogre (D:10)
+  15 blink frogs
+  Prince Ribbit (D:6)
+  Sigmund (D:6)
+  Eustachio (D:5)
+  2 hogs (D:8)
+  8 yaks
+  A basilisk (Lair:3)
+  A human (D:8)
+  A steam dragon (D:7)
+  4 hippogriffs
+  Edmund (D:5)
+  10 water moccasins
+  6 porcupines
+  Duvessa (D:5)
+  7 orc warriors
+  2 phantoms
+  An ice beast (D:8)
+  3 sky beasts
+  2 black bears
+  9 ogres
+  3 wolves
+  4 centaurs
+  4 crocodiles
+  Blork the orc (D:4)
+  2 big kobolds (D:10)
+  13 giant frogs
+  2 gnoll sergeants
+  Dowan (D:5)
+  2 wyvern skeletons
+  7 scorpions
+  A water moccasin skeleton (D:8)
+  30 killer bees
+  2 vampire bats (D:3)
+  2 crimson imps
+  A howler monkey (D:9)
+  A centaur zombie (D:5)
+  A quasit (D:6)
+  4 jellies
+  2 giant frog zombies
+  11 orc priests
+  8 hounds
+  2 giant frog skeletons
+  15 orc wizards
+  A gnoll shaman (D:8)
+  10 iguanas
+  7 worker ants
+  11 sheep
+  A hound skeleton (D:10)
+  12 mummies (Ossuary)
+  20 gnolls
+  A howler monkey skeleton (D:6)
+  13 adders
+  26 river rats
+  An ooze (D:6)
+  An adder skeleton (D:6)
+  An adder zombie (D:6)
+  4 worms
+  5 giant geckos
+  75 orcs
+  5 bats
+  A bat skeleton (D:3)
+  4 bat zombies (D:3)
+  10 giant cockroaches
+  11 goblins
+  20 hobgoblins
+  7 jackals
+  18 kobolds
+  2 quokkas
+  3 ball pythons
+  A giant gecko zombie (D:7)
+  A giant newt (D:2)
+  2 gnoll skeletons (Ossuary)
+  2 goblin skeletons (Ossuary)
+  A jackal skeleton (D:7)
+  2 kobold skeletons (Ossuary)
+  2 orc skeletons (Ossuary)
+  2 quokka skeletons
+  A quokka zombie (D:5)
+  5 rats
+  11 rat skeletons (Ossuary)
+  A fungus (Lair:3)
+513 creatures vanquished.
+
+Vanquished Creatures (collateral kills)
+  A killer bee (D:9)
+1 creature vanquished.
+
+Vanquished Creatures (others)
+  A plant (D:9)
+1 creature vanquished.
+
+Grand Total: 515 creatures vanquished
+
+Notes
+Turn   | Place    | Note
+--------------------------------------------------------------
+     0 | D:1      | Catwoman the Felid Earth Elementalist began the quest for the Orb.
+     0 | D:1      | Reached XP level 1. HP: 7/7 MP: 4/4
+   342 | D:1      | Reached XP level 2. HP: 11/11 MP: 4/6
+   346 | D:1      | Learned a level 2 spell: Passwall
+  1402 | D:2      | Reached XP level 3. HP: 14/14 MP: 4/7
+  1407 | D:2      | Learned a level 3 spell: Stone Arrow
+  1491 | D:2      | Found a stormy altar of Qazlal.
+  2076 | D:2      | Reached skill level 1 in Conjurations
+  2175 | D:2      | Found a sparkling altar of Nemelex Xobeh.
+  2259 | D:3      | Found a blossoming altar of Fedhas.
+  2356 | D:3      | Reached XP level 4. HP: 18/18 MP: 7/9
+  2387 | D:3      | Found a shattered altar of Ashenzari.
+  2843 | D:3      | Found an ancient bone altar of Kikubaaqudgha.
+  2904 | D:3      | Reached XP level 5. HP: 20/21 MP: 5/10
+  3173 | D:3      | Noticed Sycwacs's ghost (amateur HESk)
+  3764 | D:3      | Noticed an ogre
+  3772 | D:3      | Killed an ogre
+  3772 | D:3      | Gained mutation: You are covered in thick fur (AC +2). [Felid growth]
+  3772 | D:3      | Reached XP level 6. HP: 24/24 MP: 1/12
+  3778 | D:3      | Learned a level 4 spell: Petrify
+  4512 | D:4      | Noticed Blork the orc
+  4557 | D:4      | Killed Blork the orc
+  5116 | D:4      | Reached XP level 7. HP: 27/27 MP: 11/14
+  5368 | D:5      | Entered Level 5 of the Dungeon
+  5580 | D:5      | Noticed Duvessa
+  5924 | D:5      | Found an oddly glowing altar of Pakellas.
+  5985 | D:5      | Killed Duvessa
+  5987 | D:5      | Noticed Dowan
+  5998 | D:5      | Killed Dowan
+  5998 | D:5      | Reached skill level 5 in Earth Magic
+  6158 | D:5      | Noticed Edmund
+  6431 | D:5      | Noticed Eustachio
+  6436 | D:4      | Reached XP level 8. HP: 25/31 MP: 10/16
+  6837 | D:5      | Killed Edmund
+  6837 | D:5      | Reached skill level 5 in Dodging
+  6837 | D:5      | Reached skill level 5 in Spellcasting
+  7094 | D:5      | Killed Eustachio
+  7162 | D:5      | Found a staircase to the Ecumenical Temple.
+  7171 | Temple   | Entered the Ecumenical Temple
+  8253 | D:5      | Learned a level 5 spell: Lee's Rapid Deconstruction
+  8442 | D:6      | Found a stormy altar of Qazlal.
+  8525 | D:6      | Noticed Prince Ribbit
+  8853 | D:6      | Reached XP level 9. HP: 34/34 MP: 2/18
+  9399 | D:6      | Noticed Sigmund
+  9412 | D:6      | Killed Sigmund
+ 10097 | D:6      | Reached skill level 5 in Transmutations
+ 10383 | D:6      | Killed Prince Ribbit
+ 13372 | D:7      | Reached XP level 10. HP: 37/37 MP: 0/21
+ 13507 | D:8      | Found a shadowy altar of Dithmenos.
+ 13541 | D:8      | Noticed Psyche
+ 13550 | D:8      | Killed Psyche
+ 13698 | D:8      | Found a deep blue altar of Sif Muna.
+ 13701 | D:8      | Became a worshipper of Sif Muna the Loreminder
+ 13764 | D:8      | Found Dosagulu's Antique Weapon Shop.
+ 13991 | D:8      | Found a sand-covered staircase.
+ 13995 | Ossuary  | Entered an ossuary
+ 15877 | D:8      | Reached skill level 10 in Dodging
+ 16043 | D:8      | Learned a level 6 spell: Haste
+ 16046 | D:8      | Reached skill level 1 in Charms
+ 16047 | D:8      | Reached skill level 2 in Charms
+ 16213 | D:8      | Reached * piety under Sif Muna
+ 16417 | D:8      | Reached skill level 3 in Charms
+ 16528 | D:8      | Found an iron altar of Okawaru.
+ 16616 | D:8      | Found a glowing silver altar of Zin.
+ 16957 | D:9      | Found a staircase to the Orcish Mines.
+ 17024 | D:9      | Reached skill level 4 in Charms
+ 17221 | D:9      | Found an oddly glowing altar of Pakellas.
+ 17354 | D:9      | Found a staircase to the Lair.
+ 17354 | D:9      | Noticed an elephant
+ 17524 | D:9      | Reached skill level 5 in Charms
+ 17554 | D:9      | Found Xuk Yvvye's Quality Used Wands.
+ 17563 | D:9      | Bought a wand of hasting (0/9) for 312 gold pieces
+ 17874 | D:9      | Reached ** piety under Sif Muna
+ 18459 | D:9      | Reached skill level 6 in Charms
+ 18882 | D:8      | Reached XP level 11. HP: 39/40 MP: 7/24
+ 19202 | D:9      | Reached skill level 1 in Invocations
+ 19437 | D:9      | Learned a level 4 spell: Cause Fear
+ 19524 | D:9      | Reached skill level 1 in Hexes
+ 19524 | D:9      | Reached skill level 7 in Charms
+ 19990 | D:10     | Entered Level 10 of the Dungeon
+ 20055 | D:10     | Noticed a hill giant
+ 20074 | D:10     | Killed a hill giant
+ 20247 | D:10     | Reached skill level 8 in Charms
+ 20269 | D:10     | HP: 2/40 [killer bee (15)]
+ 20271 | D:9      | Slain by a killer bee
+ 20272 | D:9      | Reached XP level 10. HP: 0/37 MP: 6/23
+ 20289 | D:9      | Reached *** piety under Sif Muna
+ 20305 | D:9      | Found a staircase to the Orcish Mines.
+ 20463 | D:9      | Found an oddly glowing altar of Pakellas.
+ 20536 | D:9      | Found Xuk Yvvye's Quality Used Wands.
+ 20568 | D:9      | Found a staircase to the Lair.
+ 21456 | D:10     | Noticed Sonja
+ 22202 | D:10     | Killed Sonja
+ 22202 | D:10     | Reached skill level 9 in Charms
+ 22474 | Lair:1   | Entered Level 1 of the Lair of Beasts
+ 22650 | Lair:1   | Reached XP level 11. HP: 40/40 MP: 5/25
+ 22924 | Lair:1   | Reached skill level 5 in Hexes
+ 23173 | Lair:1   | Reached **** piety under Sif Muna
+ 23723 | Lair:1   | Learned a level 5 spell: Yara's Violent Unravelling
+ 23871 | Lair:1   | Reached skill level 10 in Charms
+ 24334 | Lair:1   | Slain by a blink frog
+ 24335 | Lair:1   | Reached XP level 10. HP: -1/37 MP: 21/24
+ 25640 | Lair:2   | Noticed a spiny frog
+ 25649 | Lair:2   | Killed a spiny frog
+ 25663 | Lair:1   | Reached ***** piety under Sif Muna
+ 26377 | Lair:3   | Reached skill level 11 in Charms
+ 26855 | Lair:3   | Reached skill level 1 in Fighting
+ 26949 | Lair:3   | Noticed a spiny frog
+ 26953 | Lair:3   | Killed a spiny frog
+ 26953 | Lair:3   | Reached XP level 11. HP: 43/43 MP: 9/25
+ 29073 | Lair:4   | Reached skill level 5 in Fighting
+ 29335 | Lair:4   | Noticed a catoblepas
+ 29542 | Lair:4   | Found a sacrificial altar of Ru.
+ 29709 | Lair:4   | HP: 1/48 [catoblepas (35)]
+ 29713 | Lair:4   | Killed from afar by a catoblepas
+
+Skill      XL: |  1  2  3  4  5  6  7  8  9 10 11 |
+---------------+----------------------------------+-----
+Earth Magic    |  3              4  5  6  7  8    |  8.3
+Conjurations   |        1  2  3     4             |  4.5
+Spellcasting   |           3     4     5  7  9    |  9.6
+Dodging        |                 3  4  6  9 10    | 10.6
+Transmutations |                    2  4  5       |  5.0
+Charms         |                            11 10 | 11.0
+Invocations    |                             3  4 |  4.8
+Hexes          |                             4  6 |  6.2
+Fighting       |                             2  5 |  5.2
+Stealth        |                                  |  2.6
+
+Action                   |  1- 3 |  4- 6 |  7- 9 | 10-12 || total
+-------------------------+-------+-------+-------+-------++-------
+Melee: Unarmed           |    23 |     4 |    13 |    63 ||   103
+       Bite              |     4 |       |     2 |     6 ||    12
+ Cast: Sandblast         |    59 |    45 |    99 |   255 ||   458
+       Stone Arrow       |       |    30 |   182 |   360 ||   572
+       Petrify           |       |       |     4 |    23 ||    27
+       Lee's Rapid Decon |       |       |     1 |    60 ||    61
+       Cause Fear        |       |       |       |     3 ||     3
+Evoke: Wand              |       |       |     7 |    12 ||    19
+  Use: Scroll            |     2 |     2 |    10 |    15 ||    29
+       Potion            |       |       |     1 |     8 ||     9
+ Stab: Sleeping          |     4 |       |       |     1 ||     5
+  Eat: Chunk             |    10 |     7 |    23 |    57 ||    97
+Armor: Skin              |     3 |     1 |     4 |    10 ||    18
+Dodge: Dodged            |    27 |    36 |    84 |   316 ||   463
+

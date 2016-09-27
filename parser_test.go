@@ -274,3 +274,17 @@ func TestParseWeirdName(t *testing.T) {
 		t.Fatal(data.Runs[0].Title)
 	}
 }
+
+func TestParseFelid(t *testing.T) {
+	data := NewData()
+	ParseFile("./morgue-Catwoman-20160824-105629.txt", data)
+	if len(data.Runs) != 1 {
+		t.Fatal(data.FailedReads)
+	}
+	if data.Runs[0].Stats["Lives"] != "0" {
+		t.Fatal(data.Runs[0].Stats)
+	}
+	if data.Runs[0].Stats["Deaths"] != "2" {
+		t.Fatal(data.Runs[0].Stats)
+	}
+}

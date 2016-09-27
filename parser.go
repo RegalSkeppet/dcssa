@@ -287,7 +287,7 @@ func (p *Parser) ParseRun() (*Run, error) {
 	currentKey := ""
 	for {
 		if currentKey == "" {
-			tok, lit = p.scan()
+			tok, lit = p.scanIgnoreWhitespace()
 			if tok != WORD {
 				return nil, errors.New("expected WORD when parsing stats: " + lit)
 			}
@@ -367,7 +367,7 @@ func (p *Parser) ParseRun() (*Run, error) {
 				currentKey = ""
 				break
 			}
-			if tok == WORD {
+			if tok == WORD || tok == BPAREN {
 				run.Resistances[currentKey] = strings.Trim(currentValue, " ")
 				currentKey = ""
 				p.unscan()
