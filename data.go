@@ -4,6 +4,7 @@ package dcssa
 type Data struct {
 	Runs        []*Run
 	FailedReads map[string]string
+	Stats       Stats
 }
 
 // NewData creates a new Data struct and sets some default values.
@@ -11,6 +12,24 @@ func NewData() *Data {
 	return &Data{
 		Runs:        make([]*Run, 0),
 		FailedReads: make(map[string]string),
+	}
+}
+
+// Stats represent stats calculated from multiple runs.
+type Stats struct {
+	Runs           int
+	Wins           int
+	RacesWon       []string
+	BackgroundsWon []string
+	CharactersWon  []string
+}
+
+// NewStats creates a new Stats struct with defaults.
+func NewStats() Stats {
+	return Stats{
+		RacesWon:       make([]string, 0),
+		BackgroundsWon: make([]string, 0),
+		CharactersWon:  make([]string, 0),
 	}
 }
 
